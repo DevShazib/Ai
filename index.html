@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Character Expression Generator</title>
+   <!-- Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+        
+        <!-- Main CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">AI Expression Generator</h1>
+
+        <!-- Upload Image Section -->
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <div>
+                    <label for="uploadImage" class="btn btn-primary">Upload Character</label>
+                    <input type="file" id="uploadImage" class="d-none" accept="image/*" onchange="previewImage(event)">
+                    <img id="uploadedImage" class="img-fluid mt-3" alt="Uploaded Character" style="display:none;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mood Buttons Section -->
+        <div class="text-center btn-group">
+            <button class="btn btn-secondary" onclick="generateExpressions()">Generate Expressions</button>
+            <button class="btn btn-info" onclick="toggle2D3D()">2D & 3D</button>
+        </div>
+
+        <!-- Generated Expressions Section -->
+        <div id="expressions" class="expression-container">
+            <div class="expression-box" id="smilingBox">
+                <h5>Smiling</h5>
+                <img id="smilingImage" src="#" alt="Smiling Expression">
+                <button class="btn btn-success download-btn" onclick="downloadImage('smilingImage')">Download</button>
+            </div>
+            <div class="expression-box" id="laughingBox">
+                <h5>Laughing</h5>
+                <img id="laughingImage" src="#" alt="Laughing Expression">
+                <button class="btn btn-success download-btn" onclick="downloadImage('laughingImage')">Download</button>
+            </div>
+            <div class="expression-box" id="surprisedBox">
+                <h5>Surprised</h5>
+                <img id="surprisedImage" src="#" alt="Surprised Expression">
+                <button class="btn btn-success download-btn" onclick="downloadImage('surprisedImage')">Download</button>
+            </div>
+            <div class="expression-box" id="sadBox">
+                <h5>Sad</h5>
+                <img id="sadImage" src="#" alt="Sad Expression">
+                <button class="btn btn-success download-btn" onclick="downloadImage('sadImage')">Download</button>
+            </div>
+            <div class="expression-box" id="madBox">
+                <h5>Mad</h5>
+                <img id="madImage" src="#" alt="Mad Expression">
+                <button class="btn btn-success download-btn" onclick="downloadImage('madImage')">Download</button>
+            </div>
+            <div class="expression-box" id="afraidBox">
+                <h5>Afraid</h5>
+                <img id="afraidImage" src="#" alt="Afraid Expression">
+                <button class="btn btn-success download-btn" onclick="downloadImage('afraidImage')">Download</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
